@@ -1,0 +1,364 @@
+/*Region: Root*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}html::-webkit-scrollbar{
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+    background:linear-gradient(to bottom, #fff 50%, rgb(240, 249, 255) 100%);
+}html::-webkit-scrollbar-thumb{
+    background-color: #999999;
+}
+
+.grid-container
+{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows:1000px 1fr 920px;
+}
+
+.grid-item
+{
+    /* border: 1px solid #000; */
+    display: flex;
+}
+
+/*Region: Header*/
+.header
+{
+    grid-column: 1/4;
+    flex-direction: column;
+    background-image: url(https://wallpaperaccess.com/full/3620180.jpg);
+    background-blend-mode:soft-light;
+    background-color: rgb(97, 126, 150);
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+}
+.header__logo-container{
+    background: #ffffffaa;
+    border: #000 solid 10px;
+    margin: 60px 0 0 10px;
+    width: 300px;
+    height: 345px;
+    text-align: center;
+    user-select: none;
+}
+.header__nav
+{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: fit-content;
+    position: fixed;
+    
+}.header__li-container{
+    display: flex;
+    flex-flow: row;
+}.header__nav-li:nth-child(3) .nav__li-a:hover{
+    color: #0ac407;
+}.header__nav-li:first-child .nav__li-a:hover{
+    color: #c50c3a;
+}.header__nav-li:nth-child(2) .nav__li-a:hover{
+    color: #19c9c9;
+}.header__nav-li:nth-child(4) .nav__li-a:hover{
+    color: #d1490a;
+}.header__nav-li:last-child .nav__li-a:hover{
+    color: #d1af1a;
+}.header__nav-li{
+    list-style-type:none;
+    margin: 10px;
+}.nav__li-a{
+    text-decoration: none;
+    color:initial;
+    transition: .4s ease;
+}
+.nav__ul-container{
+    background: #7777778d;
+}
+
+.nav__ul-container-mobile{
+    display: none;
+}
+
+/*Region: Section*/
+.section
+{
+    grid-column: 1/4;
+    justify-content: center;
+    flex-direction: column;
+}
+.section__aboutUs-container{
+    margin: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}.section__aboutUs-h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+    letter-spacing: 10px;
+}.section__aboutUs-I{
+    display: flex;
+    /* border: black 1px solid; */
+    max-width: 1600px;
+    min-width: 200px;
+    justify-content:space-evenly;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin-top: 50px; */
+}.section__aboutUs-content{
+    display: flex;
+    flex-wrap: wrap;
+}.aboutUs__description-paragraph{
+    border-left: rgb(0, 0, 0) 1px solid;
+    height: min-content;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 19px;
+    padding: 5px;
+    font-family: 'Ubuntu';
+    letter-spacing: 1px;
+    /* background-color: rgb(250, 243, 231); */
+}
+.aboutUs__img-container{
+    min-width: 300px;
+    width: 300px;
+    height: 300px;
+}
+.section__aboutUsProduct-I{
+    display: flex;
+    /* border: black 1px solid; */
+    max-width: 16000;
+    min-width: 200px;
+    justify-content:space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 40px;
+    align-items: center;
+}.section__aboutUsProduct-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}.section__aboutUsProduct-h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+    letter-spacing: 10px;
+}.aboutUsProduct__description-paragraph{
+    border-right: rgb(0, 0, 0) 1px solid;
+    height: min-content;
+    margin-top: 20px;
+    text-align: right;
+    font-size: 19px;
+    padding: 5px;
+    font-family: 'Ubuntu';
+    letter-spacing: 1px;
+}
+.aboutUsProduct__img-container{
+    min-width: 190px;
+}
+
+.section__typesOf-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    border-top: 2px solid #000;
+    border-image: linear-gradient(to right, #ffffff 5%, #000000 50%, #fff 95%) 1;
+}.section__typesOf-description{
+    display: flex;
+}.section__typesOf-h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+    letter-spacing: 10px;
+}
+.typesOf__description-cards-container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    
+}.typesOf__description-card{
+    cursor:pointer;
+    margin: 5px;
+    overflow: hidden;
+    width: 300px;
+    height: 430px;
+    border-radius: 5px;
+    background-blend-mode:soft-light;
+    box-shadow: rgb(122, 122, 122) 2px 0 12px;
+}.descriptionCard__image-container{
+    width: inherit;
+    height: inherit;
+}.typesOf__description-card:first-child{
+    background-image: url(https://i.pinimg.com/originals/38/c3/21/38c32142fab2438360711f2f521be417.jpg);
+    background-size: cover;
+    background-position: right;
+}.typesOf__description-card:nth-child(2){
+    background-image: url(https://ecoinventos.com/wp-content/uploads/2016/07/Pinatex-9.jpg);
+    background-size: cover;
+    background-position: right;
+}.typesOf__description-card:nth-child(3){
+    background-image: url(https://www.lifeder.com/wp-content/uploads/2019/07/Figura_1_Corteza_de_árbol_del_Parque_España_de_la_colonia_Roma.jpg);
+    background-size: cover;
+    background-position: right;
+}.section__typesOf-h2-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #000000ad 25%, #00000000 100%);
+    transform: translateY(400px);
+    opacity: 0;
+    transition: ease 0.7s;
+}.descriptionCard__h2{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 34px;
+    color: rgba(255, 255, 255, 0.808);
+}
+.descriptionCard__image-container img{
+    width: inherit;
+    height: inherit;
+}.typesOf__description-card:hover > .section__typesOf-h2-container, .descriptionCard__h2{
+    transform: translateY(0);
+    opacity: 1;
+}
+.section__typesOf-collapse-container{
+    min-width: none;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}.section__typesOf-collapse{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    height: 0;
+    max-width: 1600px;
+    background-color: #ebebeb;
+}.collapse__button{
+    text-align: center;
+    border-top: #000 1px solid;
+    background-color: #cfd7df;
+    cursor: pointer;
+    transition: .4s ease;
+}.collapse__button:active{
+    background-color: #a9b2bd;
+}.collapse__button-indicator{
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 10px;
+}
+.collapse__h2{
+    font-size: 20px;
+    font-family: 'Lato';
+}
+.collapse__description-container{
+    width: inherit;
+    margin-top: 8px;
+    padding-left: 4px;
+}
+
+/*Region: Footer*/
+.footer
+{
+    grid-column: 1/4;
+    background-image: url(https://wallpaperaccess.com/full/1180009.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: #c4a1073d;
+    background-blend-mode:soft-light;
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+}
+.footer__end-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    min-width: 200px;
+    width: 500px;
+    max-width: 1000px;
+    height: 550px;
+    background: linear-gradient(to top, rgba(170, 170, 170, 0.178) 10%, rgba(170, 170, 170, 0.589) 20%);
+    user-select: none;
+}.footer__end-h2-container{
+    margin-bottom: 30px;
+}.footer__end-h2{
+    font-size: 50px;
+    font-family: 'Cinzel';
+    letter-spacing: 4px;
+    color: #422b01;
+}
+
+@media screen and (max-width: 713px) {
+    .header__li-container{
+        display: none;
+    }.nav__ul-container-mobile{
+        background-color: #687c7bb4;
+        display:block;
+        height: max-content;
+        width: inherit;
+    }.ul__button{
+        margin-left: 5px;
+        font-size: 20px;
+    }.header__li-container-mobile{
+        position: absolute;
+        width: 100%;
+        background-color: #687c7bb4;
+        transform: translateY(-1000px);
+        transition: 0.2s ease;
+    }.header__nav
+    {
+        z-index: 1000;
+        display: flex;
+        justify-content: left;
+        width: 100vw;
+        height: fit-content;
+        position: fixed;   
+    }.header__logo-container{
+        align-self: center;
+    }
+
+    .section__aboutUsProduct-h2{
+        font-size: 23px;
+    }
+    .typesOf__description-card{
+        transform: scale(0.7);
+    }.section__typesOf-h2{
+        font-size: 28px;
+    }
+    .aboutUsProduct__description-paragraph{
+        font-size: 15px;
+    }.aboutUs__description-paragraph{
+        font-size: 15px;
+    }
+    .section__typesOf-collapse{
+        width: 300px;
+    }
+
+    .footer__end-container{
+        transform: scale(0.9);
+    }
+}
